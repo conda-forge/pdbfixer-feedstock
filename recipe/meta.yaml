@@ -1,5 +1,5 @@
 {% set name = "pdbfixer" %}
-{% set version = "1.7" %}
+{% set version = "1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/openmm/pdbfixer/archive/v{{ version }}.tar.gz
-  sha256: a0bef3c52a7bbe69a6aea5333f51f3e7d158339be5829aed19b0344bd66d4eea
+  sha256: f3a28585c8756e37e8adcfc5727cab63c2a51d23606a2de4cff15c86a72cb094
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv --no-deps"
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
   entry_points:
     - pdbfixer = pdbfixer.pdbfixer:main
 
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6
     - setuptools
-    - openmm >=7.5
+    - openmm >=7.6
     - numpy
 
 test:
