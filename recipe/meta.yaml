@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6
     - setuptools
-    - openmm >=7.5
+    - openmm >=7.6
     - numpy
 
 test:
