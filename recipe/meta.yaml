@@ -1,5 +1,5 @@
 {% set name = "pdbfixer" %}
-{% set version = "1.8" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/openmm/pdbfixer/archive/v{{ version }}.tar.gz
-  sha256: f3a28585c8756e37e8adcfc5727cab63c2a51d23606a2de4cff15c86a72cb094
+  sha256: d50551abfe9dbaefc066f4d9d400cdebe57f1fefd9de9d01e12beb87efd99595
 
 build:
   noarch: python
