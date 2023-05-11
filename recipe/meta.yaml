@@ -1,13 +1,13 @@
 {% set name = "pdbfixer" %}
-{% set version = "1.8.1" %}
+{% set version = "1.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/openmm/pdbfixer/archive/v{{ version }}.tar.gz
-  sha256: d50551abfe9dbaefc066f4d9d400cdebe57f1fefd9de9d01e12beb87efd99595
+  git_url: https://github.com/openmm/{{ name }}.git
+  git_rev: "6bf10e1"
 
 build:
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6
     - setuptools
-    - openmm >=7.6
+    - openmm >=8.0
     - numpy
 
 test:
