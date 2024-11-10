@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=3.6
     - setuptools
     - openmm >=8.2
     - numpy
