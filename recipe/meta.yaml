@@ -1,5 +1,5 @@
 {% set name = "pdbfixer" %}
-{% set version = "1.9" %}
+{% set version = "1.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "6bf10e1"
+  git_rev: "c83d125"
 
 build:
   noarch: python
@@ -20,10 +20,11 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python >=3.6
     - setuptools
-    - openmm >=8.0
+    - openmm >=8.2
     - numpy
 
 test:
