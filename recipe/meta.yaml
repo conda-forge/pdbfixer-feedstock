@@ -11,23 +11,25 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps
   entry_points:
     - pdbfixer = pdbfixer.pdbfixer:main
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools
     - openmm >=8.2
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pdbfixer
   commands:
