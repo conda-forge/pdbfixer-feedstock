@@ -1,5 +1,5 @@
 {% set name = "pdbfixer" %}
-{% set version = "1.11" %}
+{% set version = "1.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "199f03d"
+  git_rev: "0f70134"
 
 build:
   noarch: python
