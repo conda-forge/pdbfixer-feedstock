@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps
   entry_points:
     - pdbfixer = pdbfixer.pdbfixer:main
@@ -26,6 +26,7 @@ requirements:
     - setuptools
     - openmm >=8.2
     - numpy
+    - legacy-cgi # [py >= 313]
 
 test:
   requires:
